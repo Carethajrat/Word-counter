@@ -1,0 +1,69 @@
+
+      body {
+         background-image: url('https://user-images.githubusercontent.com/113019349/220587538-b3761ae9-af38-42a2-902e-563876b6e775.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+      }
+      .App-header {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: calc(10px + 2vmin);
+        color: white;
+      }
+      .display-none {
+        display: none;
+      }
+      .display-text {
+        display: inline-block;
+      }
+
+      .form {
+        --width-of-input: 200px;
+        --border-height: 1px;
+        --border-before-color: rgba(221, 221, 221, 0.39);
+        --border-after-color: #5891ff;
+        --input-hovered-color: #4985e01f;
+        position: relative;
+        width: var(--width-of-input);
+        margin: auto !important;
+      }
+      /* styling of Input */
+      .input {
+        color: white;
+        font-weight:bold;
+        font-size: 1rem;
+        background-color: transparent;
+        width: 100%;
+        box-sizing: border-box;
+        padding-inline: 0.5em;
+        padding-block: 0.7em;
+        border: none;
+        border-bottom: var(--border-height) solid var(--border-before-color);
+      }
+      /* styling of animated border */
+      .input-border {
+        position: absolute;
+        background: var(--border-after-color);
+        width: 0%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        transition: 0.3s;
+      }
+      /* Hover on Input */
+      input:hover {
+        background: var(--input-hovered-color);
+      }
+
+      input:focus {
+        outline: none;
+      }
+      /* here is code of animated border */
+      input:focus ~ .input-border {
+        width: 100%;
+      }
+ 
